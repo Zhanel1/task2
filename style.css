@@ -116,29 +116,37 @@ header{
     height: 20px;
 }
 .intro{
-    background-color:#000000;
-}
-.intro-content{
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
+    position: relative;
     height: 494px;
     width: 100%;
-    opacity:0.5;
 
     background: url("./images/background.png") center no-repeat;
-    backdrop-filter: brightness(50%);
     -webkit-background-size: cover;
     background-size: cover;
 }
+.intro-content{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items:flex-end;
+    height: 100%;
+    width: 100%;
+
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
 .intro-body{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+
     font-family: Assistant;
     font-style: normal;
     font-weight: normal;
     text-align: center;
-    justify-content: center;
 
     color: #FFFFFF;
+    z-index: 100;
 
     flex: none;
     flex-grow: 0;
@@ -176,7 +184,7 @@ header{
     box-sizing: border-box;
 
     /* Inside Auto Layout */
-    order: 0;
+    order: 2;
 }
 .intro__button button {
     width: 111px;
@@ -198,12 +206,71 @@ header{
     left: 0px;
     top: 558px;
 
-
-
     /* Inside Auto Layout */
     flex: none;
     order: 1;
     align-self: stretch;
     flex-grow: 0;
     margin: 64px 0px;
+}
+titles-content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+
+    position: static;
+    width: 698px;
+    height: 140px;
+    left: 251px;
+    top: 0px;
+
+    /* Inside Auto Layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 16px 0px;
+
+}
+.titles__title{
+    font-family: Assistant;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 52px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #000000;
+
+
+    /* Inside Auto Layout */
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 32px 0px;
+}
+.titles__subtitle{
+    font-family: Assistant;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 172%;
+    /* or 28px */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.04em;
+    
+    color: #000000;
+    
+    
+    /* Inside Auto Layout */
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 32px 0px;
 }
