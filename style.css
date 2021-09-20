@@ -361,78 +361,94 @@ header{
     margin-top: -4px;
 }
 
-.section{
+/* Container BAG
+================================================ */
+.container{
     display: grid;
     width: 100%;
     height: 670px;
     justify-items: center;
+    margin-top: 30px;
 }
-.section-body{
+.sections{
     display: grid;
-    border: 1px solid red;
     width: 1112px;
-    height: 100%;
-    grid-gap: 1.4em;
+    height: 670px;
+    grid-gap: 1.4em; /*  отступы: column,row*/
     grid-auto-rows: 323px;
-}
-.section-1{
-    display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 1.3em;
-    grid-auto-rows: 323px;
 }
-.box{
+.section{
     display: grid;
     width: 261px;
-    margin: 0;
 }
-.box-desc{
+.section__image{
     display: grid;
-    height: 49px; 
-    margin: 0;
+    position: relative;
+    z-index: 0;
+    height: 272px;
 }
-.box__name{
+.section__image > div{
+    display: grid;
+    position: absolute; 
+    font-family: Assistant;
+
+    justify-items: center;
+    align-content: center;
+    align-self: end;
+
+    font-size: 13px;
+    color: #FFFFFF;
+    z-index: 2;
+    width: 49px;
+    height: 25px;
+    background: #3752B2;
+    border-radius: 99px;
+
+    margin: 8px; 
+    /* тут не знаю как отступ сделать
+    через grid */
+
+}
+.sale__title{
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 4em;
+}
+.bag__photo{
+    display: grid;
+    position: absolute; 
+    z-index: 1;
+}
+.description{
+    display: grid;
+    width: 260px;
+    height: 51px;
+}
+.bag__name{
     font-family: Assistant;
     font-size: 14px;
     margin: 0;
     align-self: start;
 }
-.box__price1{
+.sale{
+    display: grid;
+    width: 178px;
+    height: 28px;
+    grid-template-columns: 1fr 1fr;
+    justify-items: start;
+    align-items: center;
+}
+.sale__price{
     margin: 0;
     font-family: Assistant;
     font-size: 14px;
-    margin-top: 5px;
     width: 88px;
-}
-.sale .box__price1{
     text-decoration-line: line-through;
 }
-.box__price2{
+.bag__price{
     margin: 0;
     font-family: Assistant;
     font-size: 16px;
-    margin-top: 4px;
     width: 88px;
-}
-.box__img > div{
-    position: relative;
-    z-index: 1;
-    width: 49px;
-    height: 25px;
-    margin-left: 8px;
-    background: #3752B2;
-    border-radius: 99px;
-    padding: 4px 12px;
-}
-.box__img .box__sale{
-    position: relative;
-    font-family: Assistant;
-    font-size: 13px;
-    color: #FFFFFF;
-    z-index: 2;
-    margin: 0 auto;
-}
-.box__img > img{
-    position: relative;
-    z-index: 0;
 }
